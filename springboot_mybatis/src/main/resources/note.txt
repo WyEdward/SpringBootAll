@@ -1,0 +1,2 @@
+数据库连接后面要加erverTimezone=UTC
+表student中字段 1、sno 2、sname 3、ssex
