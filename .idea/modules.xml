@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/SpringBoot_start/SpringBoot_start.iml" filepath="$PROJECT_DIR$/SpringBoot_start/SpringBoot_start.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot_config/springboot_config.iml" filepath="$PROJECT_DIR$/springboot_config/springboot_config.iml" />
+    </modules>
+  </component>
+</project>
