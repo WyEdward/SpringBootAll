@@ -11,7 +11,7 @@ import java.util.List;
 @Controller
 public class TestController {
 
-   @RequestMapping("/toaccount")
+   @RequestMapping("/account")
    public String index(Model m) {
        List<Account> list = new ArrayList<Account>();
        list.add(new Account("KangKang", "康康", "e10adc3949ba59abbe56e", "超级管理员", "17777777777"));
