@@ -1,4 +1,4 @@
-package cn.wyedward.Controller;
+package cn.wyedward.controller;
 
 import cn.wyedward.Service.StudentService;
 import cn.wyedward.domain.Student;
