@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.wyedward.dao.UserPermissionDao">
+    <resultMap id="Permission" type="cn.wyedward.domain.Permission">
+        <result column="id" property="id"></result>
+        <result column="url" property="url"></result>
+        <result column="name" property="name"></result>
+    </resultMap>
+
+    <select id="findByUserName" resultMap="Permission" parameterType="String">
+        SELECT
+            p.`id`,
+            p.`name`,
+            p.`url`
+        FROM
+            permission p
+        LEFT JOIN role_permission rp ON(p.`id` = rp.`pid`)
+        LEFT JOIN role r ON(r.`id`=rp.`rid`)
+        LEFT JOIN user_role ON(user_role.`rid`=r.`id`)
+        LEFT JOIN USER ON (user_role.`uid` = user.`id`)
+        WHERE username = #{username};
+    </select>
+</mapper>
