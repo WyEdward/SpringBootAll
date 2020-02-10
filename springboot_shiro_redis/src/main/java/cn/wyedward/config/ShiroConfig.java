@@ -1,5 +1,6 @@
 package cn.wyedward.config;
 
+import at.pollux.thymeleaf.shiro.dialect.ShiroDialect;
 import cn.wyedward.shiro.ShiroRealm;
 import org.apache.shiro.mgt.SecurityManager;
 import org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor;
@@ -141,7 +142,10 @@ public class ShiroConfig {
         return redisCacheManager;
     }
 
-
+    @Bean
+    public ShiroDialect shiroDialect(){
+        return new ShiroDialect();
+    }
 
 
 
