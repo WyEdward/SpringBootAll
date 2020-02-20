@@ -1,0 +1,8 @@
+management:
+  endpoints:
+    web:
+      exposure:
+        exclude: shutdown,info  # 排除端点，不可访问；多端点之间用逗号分隔
+        include: httptrace,env  # 包含端点，可以访问；多端点之间用逗号分隔
+  server:
+    port: 80
